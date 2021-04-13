@@ -1,0 +1,436 @@
+/* Couleurs*/
+/*
+#2F2E31
+#C24C2F
+#E8E8E8
+#9DA0A3
+#E2B95E
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* H */
+h1 {
+    display: inline;
+    vertical-align: middle;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 60px;
+}
+
+/* Sections */
+section {
+    padding: 60px 0 ;
+}
+
+/* NavBar */
+nav {
+    background-color:transparent;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s  ease;
+    z-index: 1000;
+}
+
+.nav-bg-color {
+    background-color:#E2B95E;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s  ease;
+}
+
+.nav-item {
+    padding: 0 10px 0 0;
+}
+
+.nav-link {
+    color: #ffffff!important;
+    border-radius: 0px!important;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav-link.active {
+    background-color: transparent!important;
+    border-bottom: 2px solid #ffffff;
+}
+
+#navBar {
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+}
+.navbar-toggler {
+    padding: 0;
+    outline: none;
+    border: none;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    border: none;
+}
+
+#burger-icon span {
+    display: block!important;
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.8s ease-in;
+}
+
+#burger-icon span::before,#burger-icon span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.8s ease-in-out;
+}
+
+#burger-icon span::before {
+    transform: translateY(-8px);
+}
+
+#burger-icon span::after {
+    transform: translateY(8px);
+}
+
+#burger-icon.active span {
+    background-color: transparent;
+}
+
+#burger-icon.active span::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#burger-icon.active span::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.navbar-brand img {
+    margin: 0 20px;
+}
+
+@media (max-width:767px) {
+    h1 {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .nav-link.active {
+        border-bottom-color: transparent;
+        color: #2F2E31!important;
+    }
+    .nav-link:hover {
+        color: #2F2E31!important;
+        border-bottom-color: transparent;
+    }
+}
+
+/* BG-Hero */
+
+#bg-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/bg-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 0px;
+    height: 60vh;
+}
+
+/* Réservation */
+
+#reservation {
+    background-color: #E2B95E;
+}
+
+#reservation h2 {
+    color: #ffffff;
+}
+
+.reservation--container {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.reservation--container button, .reservation--container input, .reservation--container select {
+    border-radius: 30px;
+    box-shadow: none!important;
+    outline: none!important;
+}
+
+.reservation--container button:focus, .reservation--container input:focus, .reservation--container select:focus {
+    border-radius: 30px;
+    box-shadow: none!important;
+    outline: none!important;
+    border-color: #666a6e;
+}
+
+.reservation--container select {
+    -webkit-appearance: none;
+}
+
+.reservation--container input, .reservation--container select {
+    padding-left: 30px;
+}
+
+.reservation--container button {
+    background-color: black;
+    color: #ffffff;
+}
+
+/* Carte */
+
+
+#carte .container {
+    width: 100%;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.image-gallery {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    gap: 1.5rem;
+    grid-template-areas: 
+        'img-viande img-burger'
+        'img-table img-table'
+        'img-cafe img-vin';
+}
+
+@media (max-width:767px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'img-viande'
+            'img-burger'
+            'img-table'
+            'img-cafe'
+            'img-vin';
+    }
+}
+
+.image-gallery a {
+    width: 100%;
+    height: 15rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.img-viande {
+    grid-area: img-viande;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/barbecue-1239434_1920.jpg);
+}
+
+.img-burger {
+    grid-area: img-burger;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/hamburger-1238246_1920.jpg);
+}
+
+.img-table {
+    grid-area: img-table;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/platter-2009590_1920.jpg);
+}
+
+.img-cafe {
+    grid-area: img-cafe;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/coffee-424763_1920.jpg);
+}
+
+.img-vin {
+    grid-area: img-vin;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../src/red-wine-2443699_1920.jpg);
+}
+
+.image-gallery h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.img-viande h3, .img-vin h3 {
+    background-color: rgba(194, 76, 47, .5);
+}
+
+.img-burger h3, .img-cafe h3{
+    background-color: rgba(226, 185, 94, .5);
+}
+
+.img-table h3{
+    background-color: rgba(157, 160, 163, .5);
+}
+
+/* CONTACT */
+
+section#contact {
+    background-color: #2F2E31;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact form {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    border-radius: 20px;
+    padding-left: 24px;
+}
+
+#contact button {
+    background-color: #E2B95E;
+    color: #FFFFFF;
+    border-color: #E2B95E;
+    font-weight: 600;
+    border-radius: 30px;
+    max-width: 200px;
+    margin-top: 40px;
+    transition: all 0.5s
+}
+
+#contact button:hover {
+    color: #E2B95E;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    transition: all 0.5s
+}
+
+#contact button:focus, #contact input:focus, #contact textarea:focus {
+    box-shadow: none!important;
+    outline: none!important;
+    border-color: #ffffff;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #C24C2F;
+    color: #ffffff;
+    padding: 50px 0 10px 0;
+}
+
+footer a {
+    color: #772b19;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s eas
+}
+
+footer a:hover {
+    color: #772b19;
+    text-decoration: none;
+    border-color: #772b19;
+}
+
+footer h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+    text-align: center;
+}
+
+footer li a, footer p {
+    color: #772b19;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+footer .footer--horaires {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.legales, .legales a{
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.legales a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-color: #fff;
+}
+
+/*BUTTON BACK*/
+
+.btn-back {
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    
+    
+    background-color: #0155A9;
+}
+
+.btn-back a {
+    color: #ffffff;
+}

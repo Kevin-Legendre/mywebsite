@@ -1,0 +1,358 @@
+/* Couleurs*/
+/*
+#FFFFFF
+#CFCFCF
+#707070
+#4E4E4E
+#000000
+#FFB84E
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+/* H */
+
+h1 {
+    margin: 0;
+    padding: 0 0 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4E4E4E;
+    margin-bottom: 0;
+    padding: 50px 0;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFB84E;
+    text-transform: uppercase;
+}
+
+
+/* Sections */
+section {
+    margin: 70px auto;
+    scroll-margin-top: 5em;
+}
+
+/* NavBar */
+nav {
+    background-color: #000000;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: #ffffff!important;
+    border-radius: 0px!important;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
+}
+
+.nav-link.active {
+    background-color: black!important;
+    border-bottom: 2px solid #FFB84E;
+}
+
+#navBar {
+    -webkit-box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+    box-shadow: 0px 13px 38px 0px rgba(0,0,0,0.13);
+}
+.navbar-toggler {
+    padding: 0;
+    outline: none;
+    border: none;
+    width: 42px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    border: none;
+}
+
+#burger-icon span {
+    display: block!important;
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.8s ease-in;
+}
+
+#burger-icon span::before,#burger-icon span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #fff;
+    transition: transform 0.8s ease-in-out;
+}
+
+#burger-icon span::before {
+    transform: translateY(-8px);
+}
+
+#burger-icon span::after {
+    transform: translateY(8px);
+}
+
+#burger-icon.active span {
+    background-color: transparent;
+}
+
+#burger-icon.active span::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#burger-icon.active span::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+.navbar-brand img {
+    margin: 0 20px;
+}
+
+@media (max-width:767px) {
+    h1 {
+        display: none;
+    }
+}
+
+
+/* BG-Hero */
+#bg-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/bg_hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 0px;
+    height: 50vh;
+    margin-top: 0;
+}
+
+#bg-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px;
+    margin-bottom: 0;
+    text-align: center; 
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: none;
+    background-color: rgba(255, 184, 78, 0.7);
+}
+
+/* Tarifs */
+
+.carte {
+    background-color: #FFB84E;
+    max-width: 200px;
+    margin: 15px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.carte * {
+    color: #ffffff;
+}
+
+.carte-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.carte-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.carte-body {
+    margin: 10px 0;
+}
+
+.carte-spacer {
+    display: block;
+    width: 40%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+/* La Team */
+
+.carte-team {
+    margin: 30px auto;
+    max-width: 200px;
+    text-align: center;
+}
+
+.carte-team img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+
+
+/* Contact */
+#contact form {
+    max-width: 690px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    padding-left: 30px;
+    text-transform: capitalize;
+}
+
+#contact input:focus, #contact textarea:focus {
+    border-color: #FFB84E;
+    box-shadow: 0 0 0 0.2rem rgba(255,184,78,.25);
+}
+
+#contact ::placeholder{
+    opacity: 0.5;
+    font-weight: 600;
+}
+#contact ::-moz-placeholder {
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+.btn-orange {
+    background-color: #FFB84E;
+    border: 1px solid #FFB84E;
+    color: #ffffff;
+    font-weight: 600;
+    width: 100%;
+}
+
+.btn-orange:hover {
+    background-color: #fff;
+    color: #FFB84E;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    padding: 50px 0 10px 0;
+}
+
+footer a {
+    color: #CFCFCF;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    -o-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s eas
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-color: #fff;
+}
+
+footer h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+    text-align: center;
+}
+
+footer li, footer p {
+    color: #CFCFCF;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.legales {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* Container-Spacer */
+
+section.c-spacer1, section.c-spacer2 {
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px 0px;
+    height: 200px;
+}
+
+section.c-spacer1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../src/c_spacer_1.jpg);
+}
+
+section.c-spacer2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../src/c_spacer_1.jpg);
+}
+
+
+/*BUTTON BACK*/
+
+.btn-back {
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    
+    
+    background-color: #0155A9;
+}
+
+.btn-back a {
+    color: #ffffff;
+}

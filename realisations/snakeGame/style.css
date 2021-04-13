@@ -1,0 +1,35 @@
+body {
+    background-color:#ACCB9D;
+}
+
+h1 {
+    text-align: center;
+    color: #314028;
+    font-size: 50px;
+    text-decoration: underline;
+}
+/*BUTTON BACK*/
+.btn {
+    padding: .7rem .8rem;
+    border-radius: .25rem;
+
+}
+
+.btn-back {
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    
+    
+    background-color: #0155A9;
+}
+
+.btn-back a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
