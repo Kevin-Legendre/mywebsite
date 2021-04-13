@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2f3945;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    margin: 30px auto;
+}
+table {
+    margin: 0 auto;
+}
+
+td {
+    width: 100px!important;
+    height: 100px!important;
+    background-color: #fff;
+    font-size: 100px;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+span {
+    color: #fff;
+}
+
+#div-win {
+    height:27px;
+    color: #2f3945;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#div-win.active {
+    color: #fff;
+}
+.table-container {
+    position: relative;
+}
+
+.table-end-game {
+    display: none;
+    position: absolute;
+    width: 305px;
+    height: 305px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+}
+
+#retry, #set-zero {
+    display: inline;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    font-size:1.5rem;
+    font-weight: 700;
+    transition: all ease 200ms;
+}
+
+#retry {
+    background-color: rgba(0, 181, 69, 1);
+}
+
+#set-zero {
+    background-color: rgba(246, 119, 16, 1);
+}
+
+#retry:hover {
+    background-color: rgba(0, 181, 69, .8);
+}
+
+#set-zero:hover {
+    background-color: rgba(246, 119, 16, .8);
+}
+
+.table-end-game.active {
+    display: block;
+}
+
+
+
+
+#scoreboard {
+    margin: 0 auto;
+    padding: 0 25px;
+    color: #fff;
+}
+
+#scoreboard p {
+    margin: 10px 0;
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    font-size:1.2rem
+}
+
+/*BUTTON BACK*/
+
+.btn-back {
+    padding: .7rem .8rem;
+    border-radius: .25rem;
+    position: fixed;
+    bottom: 30px;
+    left: 15px;
+    
+    background-color: #0155A9;
+}
+
+.btn-back a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
