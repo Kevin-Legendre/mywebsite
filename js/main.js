@@ -31,7 +31,6 @@ $(function () {
         observer.unobserve(entry.target)
       }
     })
-    console.log('handle')
   }
 
   const observer = new IntersectionObserver(handleIntersect, options)
