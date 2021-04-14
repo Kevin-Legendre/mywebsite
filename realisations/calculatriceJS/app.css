@@ -91,6 +91,14 @@ h1 {
     background-color: #a9a9a9;
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 30px 10px;
+        margin: 0;
+    }
+}
+
 /*BUTTON BACK*/
 
 
