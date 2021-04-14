@@ -54,7 +54,7 @@ h1 {
 .button-wrap {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px;
+    grid-gap: 5px 12px;
     margin-top: 10px;
 }
 
