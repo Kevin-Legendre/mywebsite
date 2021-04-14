@@ -31,7 +31,9 @@ sendEmail = function (name, email, message) {
 
 clearForm = function () {
     const inputs = document.querySelectorAll('input')
+    const textA = document.querySelector('textarea')
     inputs.forEach(function (input) {
         input.value =""
     })
+    textA.value = ""
 }
