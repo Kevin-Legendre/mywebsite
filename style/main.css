@@ -410,6 +410,12 @@ p.form-error {
     margin-bottom: 0px;
 }
 
+@media screen and (max-width: 768px) {
+    #contact .btn.form-control {
+        min-width: 95px;
+    }
+}
+
 /* ANNIMATIONS */
 
 .reveal [class*="reveal-"] {
