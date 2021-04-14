@@ -374,7 +374,7 @@ section#contact .container {
 }
 
 section#contact .form-group {
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 section#contact .form-control:focus {
@@ -388,11 +388,19 @@ section#contact .btn.btn-primary.form-control {
     background-color: #0155A9;
 }
 
-p.form-success {
-    padding: 0px 10px;
+p.btn.form-success {
     color: #fff;
-    font-style: italic;
-    margin-bottom: 0px;
+    background-color: #28a745;
+    border-color: #28a745;
+    text-align: center;
+    display: block;
+}
+p.btn.form-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    text-align: center;
+    display: block;
 }
 
 p.form-error {
