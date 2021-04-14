@@ -19,6 +19,7 @@ sendEmail = function (name, email, message) {
         pSuccess.classList.add('btn', 'form-success')
         pSuccess.textContent = "L'email a été envoyé avec succès!"
         document.querySelector('.container').prepend(pSuccess)
+        clearForm()
         
     } else {
         const pDanger = document.createElement('p')
@@ -27,4 +28,11 @@ sendEmail = function (name, email, message) {
         document.querySelector('.container').prepend(pDanger)
     }
 
+}
+
+clearForm = function () {
+    const inputs = document.querySelectorAll('input')
+    inputs.forEach(function (input) {
+        input.textContent =""
+    })
 }
