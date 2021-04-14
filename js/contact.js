@@ -6,7 +6,6 @@ sendEmail = function (name, email, message) {
     }
 
     if (name != "" && email != "" && message != "" ) {
-        console.log(name, email, message)
         let constructMessage = name + "\n" + email + "\n" + message
         Email.send({
             SecureToken: "912383e2-5358-4b1a-880d-7c7efa193e9f",
@@ -14,7 +13,7 @@ sendEmail = function (name, email, message) {
             From: "kevinlegendre.dev@gmail.com",
             Subject: "Contact depuis mon site",
             Body: constructMessage,
-        }).then(message => console.log(message))
+        }).then(message => message)
         const pSuccess = document.createElement('p')
         pSuccess.classList.add('btn', 'form-success')
         pSuccess.textContent = "L'email a été envoyé avec succès!"
@@ -33,6 +32,6 @@ sendEmail = function (name, email, message) {
 clearForm = function () {
     const inputs = document.querySelectorAll('input')
     inputs.forEach(function (input) {
-        input.textContent =""
+        input.value =""
     })
 }
