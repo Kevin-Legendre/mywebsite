@@ -2,16 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://kit.fontawesome.com/6df93e989a.js'></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Snake Game</title>
 </head>
 <body>
   <h1>Snake Game</h1>
-  <div class="btn btn-back"><a href="../../index.html#portfolio"><i class="fas fa-arrow-left"></i></i> kevinlegendre.fr</a></div>
-  <script>
-    alert("Ce jeu est disponible uniquement sur ordinateur!");
-  </script>
+  <div class="canvas"></div>
+
+  <div class="container">
+    <div class="directions">
+      <div class="dir dir-left" data-direction="left"><i class="fas fa-arrow-left"></i></div>
+      <div class="dir dir-up" data-direction="up"><i class="fas fa-arrow-up"></i></div>
+      <div class="dir dir-right" data-direction="right"><i class="fas fa-arrow-right"></i></div>
+      <div class="dir dir-down" data-direction="down"><i class="fas fa-arrow-down"></i></div>
+      <div class="dir dir-start" data-direction="start"><i class="fas fa-play"></i></div>
+    </div>
+  </div>
+
+  <div class="btn btn-back"><a href="../../index.html#portfolio"><i class="fas fa-arrow-left"></i></a></div>
+  <script src="script.js"></script>
 </body>
 </html>
