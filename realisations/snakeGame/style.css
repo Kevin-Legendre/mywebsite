@@ -1,7 +1,5 @@
 body {
     background-color:#ACCB9D;
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
@@ -67,7 +65,11 @@ h1 {
 }
 
 
-
+@media screen and (max-width: 940px){
+    canvas {
+        width: 95%;
+    }
+}
 
 @media screen and (max-width:767px) {
     h1{
