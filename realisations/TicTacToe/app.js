@@ -14,7 +14,6 @@ window.onload = function () {
     //boucle pour ajouter le coup
     blockList.forEach(function (block) {
         block.addEventListener('click', function (e) {
-            console.log(block.dataset.player)
             if (block.textContent == '' && win.textContent == "") {
                 if (player == 'x') {
                     block.innerHTML = xSvg
@@ -117,7 +116,7 @@ window.onload = function () {
     checkLose = function () {
         let isLose = true
         blockList.forEach(function (block) {
-            if (block.dataset.player == '') {
+            if (block.dataset.player == '' || block.dataset.player === undefined) {
              isLose = false
             }
         })
@@ -146,7 +145,6 @@ window.onload = function () {
 
     retry.addEventListener('click', function (e) {
         clear()
-        console.log('clear')
     })
 
 
