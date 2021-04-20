@@ -87,6 +87,17 @@ h1 {
     }
 }
 
+.fa-play{
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.fa-play.active{
+    opacity: 1;
+}
+
 /*BUTTON BACK*/
 .btn {
     padding: .7rem .8rem;

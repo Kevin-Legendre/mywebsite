@@ -1,6 +1,7 @@
 window.onload = function () {
 
     const canvasDiv = document.querySelector('.canvas');
+    const playBtn = document.querySelector('.dir-start');
 
     const canvasWidth = 900;
     const canvasHeight = 600;
@@ -58,6 +59,7 @@ window.onload = function () {
     }
 
     function refreshCanvas() {
+        playBtn.firstChild.classList.remove('active')
         snakee.advance();
         if (snakee.checkCollision()) {
             gameOver();
@@ -79,6 +81,7 @@ window.onload = function () {
     }
 
     function gameOver() {
+        playBtn.firstChild.classList.add('active')
         ctx.save();
         ctx.font = 'bold 70px sans-serif';
         ctx.fillStyle = "#314028";
@@ -281,6 +284,11 @@ window.onload = function () {
                 newDir = "down"
                 break;
             case "start":
+                if (playBtn.firstChild.matches('.active')) {
+                    restart()
+                    return
+                }
+                break;
             case 32:
                 restart()
                 return;
