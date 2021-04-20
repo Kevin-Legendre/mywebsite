@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://kit.fontawesome.com/6df93e989a.js'></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <h1>TicTacToe</h1>
+
+
     <div class="container">
         <h2 id="div-win"></h2> 
         <div class="table-container">
@@ -34,14 +34,19 @@
                     <td id="8"></td>
                 </tr>
             </table>
-            <div class="table-end-game">
-                <button id="retry">Rejouer</button>
-                <button id="set-zero">Remmettre à zéro les scores</button>
-            </div>
         </div>
-        <div id="scoreboard">
-            <p id="x">X : <span id="score-X">0</span></p>
-            <p id="o">O : <span id="score-O">0</span></p>
+        <div class="btn-retry">
+            <span id="retry">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60.651" height="74.393" viewBox="0 0 60.651 74.393">
+                    <g id="Groupe_2" data-name="Groupe 2" transform="translate(-863 -928.619)">
+                        <path id="Tracé_1" data-name="Tracé 1" d="M25.326,0A25.326,25.326,0,1,1,0,25.326"
+                            transform="translate(868 947.361)" fill="none" stroke="#fbfbfb" stroke-width="10" />
+                        <path id="Polygone_1" data-name="Polygone 1" d="M15.059,0,30.117,25.326H0Z"
+                            transform="translate(875.987 928.619) rotate(14)" fill="#fbfbfb" />
+                    </g>
+                </svg>
+
+            </span>
         </div>
     </div>
     <div class="btn btn-back"><a href="../../index.html#portfolio"><i class="fas fa-arrow-left"></i></a></div>

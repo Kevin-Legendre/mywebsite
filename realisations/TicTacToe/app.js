@@ -1,30 +1,38 @@
 window.onload = function () {
-    let player = 'X'
-    let lastMove =[]
+    let player = 'x'
+    let lastMove = []
+    
+    const xSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='105.131' height='105.131' viewBox='0 0 105.131 105.131'><g id='Croix' transform='translate(-907.55 -555.55)'><line id='Ligne_1' data-name='Ligne 1' y2='134.677' transform='translate(1007.731 560.5) rotate(45)' fill='none' stroke='#e46e20' stroke-width='14' /><line id='Ligne_2' data-name='Ligne 2' y2='134.677' transform='translate(912.5 560.5) rotate(-45)' fill='none' stroke='#e46e20' stroke-width='14' /></g></svg>"
+    const oSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'><g id='Cercle' transform='translate(-896 -346)'><g id='Ellipse_1' data-name='Ellipse 1' transform='translate(896 346)' fill='none' stroke='#1fb157' stroke-width='14'><circle cx='64' cy='64' r='64' stroke='none' /><circle cx='64' cy='64' r='57' fill='none'/></g></g></svg >"
+                  
+
 
     const blockList = document.querySelectorAll('td')
     const win = document.getElementById('div-win')
-    const endGame = document.querySelector('.table-end-game')
     const retry = document.getElementById('retry')
-    const setZero = document.getElementById('set-zero')
 
     //boucle pour ajouter le coup
     blockList.forEach(function (block) {
         block.addEventListener('click', function (e) {
+            console.log(block.dataset.player)
             if (block.textContent == '' && win.textContent == "") {
-                block.textContent = player
+                if (player == 'x') {
+                    block.innerHTML = xSvg
+                } else {
+                    block.innerHTML = oSvg
+                }
+                block.dataset.player = player
                 lastMove[0] = player
                 lastMove[1] = block.getAttribute('id')
 
                 if (checkWin(lastMove)) {
-                    win.textContent = lastMove[0] + " gagne"
+                    win.textContent = lastMove[0] + " Gagne !"
                     win.classList.add('active')
-                    endGame.classList.add('active')
-                    incrementScore(lastMove[0])
+                    retry.classList.add('active')
                 } else if (checkLose()) {
                     win.textContent = "Perdu"
                     win.classList.add('active')
-                    endGame.classList.add('active')
+                    retry.classList.add('active')
                 }
 
                 changePlayer()
@@ -109,7 +117,7 @@ window.onload = function () {
     checkLose = function () {
         let isLose = true
         blockList.forEach(function (block) {
-            if (block.textContent == '') {
+            if (block.dataset.player == '') {
              isLose = false
             }
         })
@@ -120,37 +128,25 @@ window.onload = function () {
     // Changer de joueur
 
     changePlayer = function () {
-        if (player == 'X') {
-            player = 'O'
+        if (player == 'x') {
+            player = 'o'
         } else {
-            player = 'X'
+            player = 'x'
         }
     }
 
     // Contenu du block
     
     checkBlock = function (num) {
-        return document.getElementById(num).textContent
+        return document.getElementById(num).dataset.player
     }
 
-    // Incrementation point
-
-    incrementScore = function (joueur) {
-        document.getElementById('score-' + joueur).textContent = parseInt(document.getElementById('score-' + joueur).textContent) + 1
-    }
-
-    //remise à zéro des score
-
-    setZero.addEventListener('click', function (e) {
-        document.getElementById('score-X').textContent = 0
-        document.getElementById('score-O').textContent = 0
-        clear()
-    })
 
     //Rejouer
 
     retry.addEventListener('click', function (e) {
         clear()
+        console.log('clear')
     })
 
 
@@ -158,12 +154,13 @@ window.onload = function () {
 
     clear = function () {
         blockList.forEach(function (block) {
-            block.textContent = ''
+            block.innerHTML = '';
+            block.dataset.player = '';
         })
         document.getElementById('div-win').textContent = ""
         document.getElementById('div-win').classList.remove('active')
-        player = 'X'
-        endGame.classList.remove('active')
+        player = 'x'
+        retry.classList.remove('active')
     }
 
 }

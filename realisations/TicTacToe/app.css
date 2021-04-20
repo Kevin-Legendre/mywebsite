@@ -5,14 +5,16 @@
 }
 
 body{
-    background-color: #2f3945;
-    font-family: 'Nunito';
-}
+    background-color: #222222;
+    font-family: 'Montserrat', sans-serif;
+
+} 
 
 h1 {
-    color: #fff;
+    color: #FBFBFB;
     text-align: center;
     margin-top: 50px;
+    font-weight:500;
 }
 
 .container {
@@ -20,14 +22,22 @@ h1 {
     height: 350px;
     margin: 20px auto;
 }
+
+svg {
+    width: 70%;
+    height: 70%;
+}
+
 table {
     margin: 0 auto;
+    border-spacing: 9px;
 }
 
 td {
     width: 100px!important;
     height: 100px!important;
-    background-color: #fff;
+    border-radius: 5px;
+    background-color: #2D2D2D;
     font-size: 100px;
     line-height: 100px;
     text-align: center;
@@ -42,75 +52,43 @@ span {
 }
 
 #div-win {
+    font-weight: 400;
     height:27px;
     color: #2f3945;
-    text-transform: uppercase;
     text-align: center;
     margin: 10px auto;
 }
 
 #div-win.active {
-    color: #fff;
+    color: #959595;
 }
 .table-container {
     position: relative;
 }
 
-.table-end-game {
-    display: none;
-    position: absolute;
-    width: 305px;
-    height: 305px;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(255, 255, 255);
+.btn-retry {
+    margin-top: 10px;
 }
 
-#retry, #set-zero {
-    display: inline;
-    width: 100%;
-    height: 50%;
-    cursor: pointer;
-    color: #ffffff;
-    font-size:1.5rem;
-    font-weight: 700;
-    transition: all ease 200ms;
-}
-
-#retry {
-    background-color: rgba(0, 181, 69, 1);
-}
-
-#set-zero {
-    background-color: rgba(246, 119, 16, 1);
-}
-
-#retry:hover {
-    background-color: rgba(0, 181, 69, .8);
-}
-
-#set-zero:hover {
-    background-color: rgba(246, 119, 16, .8);
-}
-
-.table-end-game.active {
+span#retry {
     display: block;
-}
-
-
-#scoreboard {
+    width: 50px;
     margin: 0 auto;
-    padding: 0 25px;
-    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
-#scoreboard p {
-    margin: 10px 0;
-    display: inline-block;
-    width: 49%;
-    text-align: center;
-    font-size:1.2rem
+span#retry.active {
+    opacity: 1;
+}
+
+span#retry svg {
+    width: 40px;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -140,3 +118,6 @@ span {
 a:hover {
     text-decoration: underline;
 }
+
+
+
