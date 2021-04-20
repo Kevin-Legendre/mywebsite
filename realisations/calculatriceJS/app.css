@@ -5,13 +5,15 @@
 }
 
 body{
-    background-color: #2f3945;
+    background-color: #FAEBD7;
 }
 
 h1 {
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #343434;
     text-align: center;
-    margin-top: 50px;
+    margin: 50px;
 }
 
 .container {
@@ -21,15 +23,22 @@ h1 {
 }
 
 .calc {
-    background-color: rgb(243, 243, 243);
-    padding: 20px;
+    background-color: #224666;
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.display {
+    margin-bottom: 30px;
+    background-color: #BDBDBD;
     border-radius: 5px;
+    font-family: 'Arial', sans-serif;
 }
 
 .result {
     text-align: right;
     margin-bottom: 10px;
-    padding: 0 10px;
+    padding: 10px 10px;
     height: 18px;
 }
 
@@ -41,7 +50,8 @@ h1 {
     text-align: right;
     width: 100%;
     font-size: 20px;
-    border:1px solid #c0c0c0;
+    border:none;
+    background-color: transparent;
     border-radius: 5px;
     padding: 3px 5px;
 }
@@ -51,25 +61,15 @@ h1 {
     outline:none
 }
 
-.button-wrap {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px 12px;
-    margin-top: 10px;
-}
-
 .btn {
-    width: 50px;
+    width: 55px;
     height: 30px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    border: 1px solid rgb(124, 124, 124);
     border-radius:3px;
-    color: #414f5b;
-    box-shadow: 1px 1px 0 rgb(0 0 0 / 5%);
-    border-color: #c0c0c0 #7491a5 #7491a5 #c0c0c0;
-    background: linear-gradient(to bottom, #fff 0, #e6e6e6 100%);
+    color: #ffffff;
+    background: #5CC3E1;
     cursor: pointer;
     user-select: none;
     -moz-user-select: none;
@@ -78,26 +78,93 @@ h1 {
     -o-user-select: none;
 }
 
-.btn-equ {
-    grid-column-start: 5;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    line-height: 100px;
-    height: 100px;
+.button-wrap {
+    display: grid;
+    grid-template: 
+            "num7 num8 num9 c remove"
+            "num4 num5 num6 mult div"
+            "num1 num2 num3 moins equ"
+            "num0 num0 point plus equ"
+        ;
+    gap: 5px;
+    margin-top: 10px;
 }
 
-.sign.active {
-    background:none;
-    background-color: #a9a9a9;
+.btn-1 {
+    grid-area: num1;
+}    
+.btn-2 {
+    grid-area: num2;
+}    
+.btn-3 {
+    grid-area: num3;
+}    
+.btn-4 {
+    grid-area: num4;
+}    
+.btn-5 {
+    grid-area: num5;
+}    
+.btn-6 {
+    grid-area: num6;
+}    
+.btn-7 {
+    grid-area: num7;
+}    
+.btn-8 {
+    grid-area: num8;
+}    
+.btn-9 {
+    grid-area: num9;
+}    
+.btn-0 {
+    grid-area: num0;
+    width: 115px;
+}    
+.btn-equ {
+    grid-area: equ;
+    height: 65px;
+    line-height: 65px;
+    background-color: #5CB85C;
+}    
+.btn-plus {
+    grid-area: plus;
+}    
+.btn-moins {
+    grid-area: moins;
+}    
+.btn.btn-div {
+    grid-area: div;
+}    
+.btn.btn-mult {
+    grid-area:mult;
+}    
+.btn.btn-point {
+    grid-area: point;
+}    
+.btn.btn-c {
+    grid-area: c;
+    background-color: #DC5452;
+}    
+.btn.btn-remove {
+    grid-area: remove;
+    background-color: #DC5452;
+} 
+
+.sign {
+    background-color: #F0AE4C;
 }
 
 @media screen and (max-width: 768px) {
     .container {
         width: 100%;
         padding: 30px 10px;
-        margin: 0;
+        margin: 0 auto;
     }
-}
+    .calc {
+        width: 340px;
+    }
+} 
 
 /*BUTTON BACK*/
 
