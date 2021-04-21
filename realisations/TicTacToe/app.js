@@ -2,10 +2,9 @@ window.onload = function () {
     let player = 'x'
     let lastMove = []
     
-    const xSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='105.131' height='105.131' viewBox='0 0 105.131 105.131'><g id='Croix' transform='translate(-907.55 -555.55)'><line id='Ligne_1' data-name='Ligne 1' y2='134.677' transform='translate(1007.731 560.5) rotate(45)' fill='none' stroke='#e46e20' stroke-width='14' /><line id='Ligne_2' data-name='Ligne 2' y2='134.677' transform='translate(912.5 560.5) rotate(-45)' fill='none' stroke='#e46e20' stroke-width='14' /></g></svg>"
-    const oSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'><g id='Cercle' transform='translate(-896 -346)'><g id='Ellipse_1' data-name='Ellipse 1' transform='translate(896 346)' fill='none' stroke='#1fb157' stroke-width='14'><circle cx='64' cy='64' r='64' stroke='none' /><circle cx='64' cy='64' r='57' fill='none'/></g></g></svg >"
+    const xSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='63' height='63' viewBox='0 0 105.131 105.131'><g id='Croix' transform='translate(-907.55 -555.55)'><line id='Ligne_1' data-name='Ligne 1' y2='134.677' transform='translate(1007.731 560.5) rotate(45)' fill='none' stroke='#e46e20' stroke-width='14' /><line id='Ligne_2' data-name='Ligne 2' y2='134.677' transform='translate(912.5 560.5) rotate(-45)' fill='none' stroke='#e46e20' stroke-width='14' /></g></svg>"
+    const oSvg = "<svg xmlns='http://www.w3.org/2000/svg' width='63' height='63' viewBox='0 0 128 128'><g id='Cercle' transform='translate(-896 -346)'><g id='Ellipse_1' data-name='Ellipse 1' transform='translate(896 346)' fill='none' stroke='#1fb157' stroke-width='14'><circle cx='64' cy='64' r='64' stroke='none' /><circle cx='64' cy='64' r='57' fill='none'/></g></g></svg >"
                   
-
 
     const blockList = document.querySelectorAll('td')
     const win = document.getElementById('div-win')
@@ -14,7 +13,7 @@ window.onload = function () {
     //boucle pour ajouter le coup
     blockList.forEach(function (block) {
         block.addEventListener('click', function (e) {
-            if (block.textContent == '' && win.textContent == "") {
+            if ((block.dataset.player == undefined || block.dataset.player == "") && win.textContent == "") {
                 if (player == 'x') {
                     block.innerHTML = xSvg
                 } else {
@@ -25,7 +24,7 @@ window.onload = function () {
                 lastMove[1] = block.getAttribute('id')
 
                 if (checkWin(lastMove)) {
-                    win.textContent = lastMove[0] + " Gagne !"
+                    win.innerHTML = "<span id='player-win'>" + lastMove[0] + "</span>" + " Gagne!"
                     win.classList.add('active')
                     retry.classList.add('active')
                 } else if (checkLose()) {
@@ -33,7 +32,6 @@ window.onload = function () {
                     win.classList.add('active')
                     retry.classList.add('active')
                 }
-
                 changePlayer()
             }
         })

@@ -23,10 +23,6 @@ h1 {
     margin: 20px auto;
 }
 
-svg {
-    width: 70%;
-    height: 70%;
-}
 
 table {
     margin: 0 auto;
@@ -47,20 +43,23 @@ td {
     -ms-user-select: none;
     user-select: none;
 }
-span {
+span#retry {
     color: #fff;
 }
 
 #div-win {
     font-weight: 400;
     height:27px;
-    color: #2f3945;
     text-align: center;
     margin: 10px auto;
 }
 
 #div-win.active {
     color: #959595;
+}
+
+#player-win {
+    text-transform: uppercase;
 }
 .table-container {
     position: relative;
