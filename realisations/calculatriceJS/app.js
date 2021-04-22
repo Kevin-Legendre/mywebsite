@@ -9,7 +9,8 @@ window.onload = function () {
         })
     })
 
-    document.addEventListener('keydown', function (e) {
+    window.addEventListener('keydown', function (e) {
+
         traitement(e.keyCode)
     })
 
@@ -102,11 +103,8 @@ window.onload = function () {
     }
 
 
-    increment = function (value) {
-        input.value += value
+    increment = function (newValue) {
+        input.value += newValue
     }
-
-
-
 
 }
