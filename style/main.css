@@ -455,3 +455,30 @@ ul.btn.form-danger {
     font-size: 6rem;
     line-height: 5rem;
 }
+
+.technos-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 70px;
+    margin-top: 50px;
+
+}
+
+.techno {
+    display:flex;
+    flex-direction: column;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.techno-nom {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.techno-logo img{
+    display: block;
+    margin: 0 auto;
+    width: 75px;
+}
