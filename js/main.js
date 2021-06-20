@@ -16,7 +16,7 @@ $(function () {
   });
   
 
-  const ratio = .1;
+  const ratio = 0.5;
 
   const options = {
     root: null,
